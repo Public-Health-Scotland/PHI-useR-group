@@ -7,3 +7,6 @@
 3. **Synthetic Data** – Jenny Armstrong
 4. **Record Swapping** - Tina Fu
 5. **R Code Repository?**
+6. **Redoc - combining R Markdown and tracked changes** - Alan Yeung
+7. **PHI/ISD ggplot theme** - Anna Price
+8. **Internal R Training** - Anna Price
