@@ -10,3 +10,4 @@
 6. **Internal R Training** - Anna Price
 7. **R Resources for Self Training** - Alan Yeung (5')
 8. **R Code Repository**
+9. **Next Meeting & Chair**
