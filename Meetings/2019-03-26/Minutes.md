@@ -13,7 +13,7 @@
     - tidylog; to provide feedback on dplyr functions.
     - here; to define file paths relative to an R Studio project location.
     - janitor; a variety of functions for 'cleaning' data.
-    - fuzzy_join; joining functions that allow partial matching.
+    - fuzzyjoin; joining functions that allow partial matching.
 
     His slides can be viewed [here](http://rpubs.com/jackhannah95/obscure-packages).
     
