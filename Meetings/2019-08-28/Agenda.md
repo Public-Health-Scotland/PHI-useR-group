@@ -5,6 +5,6 @@
 1. **Welcome & Introductions**
 2. **HSMR Publication** - David Caldwell & Jack Hannah
 3. **Bayes Factors, permutation approaches to hypothesis testing, and R’s infer package and its ‘there is only one test’ framework** - Jon Minton
-4. **Reproducible Environments in R with `renv`** - Terry McLaughlin 
+4. **Reproducible Environments in R with [`renv`](https://rstudio.github.io/renv/)** - Terry McLaughlin 
 5. **R News / Updates**
 6. **Next Meeting & Chair**
