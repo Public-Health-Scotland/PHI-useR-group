@@ -6,7 +6,7 @@
   2. **phiproject R packages** - Alan Yeung
 3. **Developing R Shiny apps for mobile devices** - Ewout Jaspers
 4. **flextable demo** - Lisa Hopcroft
-5. **NHS R event** - Jade Carruthers
+5. **CKAN extraction code** - Tina Fu
 6. **R News / Updates**
   7. **Next Meeting & Chair**
   
