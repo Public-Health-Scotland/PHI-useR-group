@@ -5,3 +5,4 @@
 | 3 | 18/06/2019 | Meridian 4.8 | David Caldwell |
 | 4 | 28/08/2019 | Gyle BR 1 | Terry McLaughlin |
 | 5 | 08/11/2019 | Meridian 6.5 | Jade Carruthers |
+| 6 | 25/02/2020 | Gyle 1.11 | Alice Byers |
