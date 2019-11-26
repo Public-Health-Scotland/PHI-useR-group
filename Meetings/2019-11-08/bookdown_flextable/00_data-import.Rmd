@@ -1,0 +1,46 @@
+```{r dummy_data_generation}
+
+###
+### Setting up variables Variables to generate the dummy data
+###
+
+set.seed( 5482 )
+
+number_of_patients = 20
+
+start_of_trial = ymd( "2015-01-01" )
+end_of_trial   = start_of_trial + years(5)
+
+drug_treatment = c( "Drug A",
+                    "Drug B",
+                    "Drug A+B" )
+
+endpoint_1_minimum = -50
+endpoint_1_maximum =  50
+
+endpoint_2_minimum = 0
+endpoint_2_maximum = 20
+
+
+###
+### Generating the dataset using these variables
+###
+
+trial_data = tibble(
+  patient           = sprintf( "N%04d", 1:number_of_patients),
+  date_of_treatment = sample( seq(start_of_trial,
+                                  end_of_trial,
+                                  by = "day"),
+                              number_of_patients ),
+  drug_treatment    = sample( drug_treatment,
+                              number_of_patients,
+                              replace = TRUE),
+  primary_endpoint_1  =  runif(number_of_patients,
+                               endpoint_1_minimum,
+                               endpoint_1_maximum),
+  primary_endpoint_2  =  runif(number_of_patients,
+                               endpoint_2_minimum,
+                               endpoint_2_maximum)
+)
+
+```

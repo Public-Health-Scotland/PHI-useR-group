@@ -1,0 +1,131 @@
+# Presentation of data
+
+## Using `knitr::kable()`
+
+Here is our trial data, presented using `knitr::kable()`.
+
+```{r data_presentation_kable}
+kable( trial_data.clean )
+```
+
+There are some things that we can't do using kable.
+This includes:
+
+ * merging cells in the header
+ * conditional formatting (font colour, fill, style etc.)
+ * dynamic formatting (i.e., changes with value in a variable)
+ * white space within cells (useful for subtypes) - not covered here
+
+## Using `flextable()`
+
+First, some basics.
+
+1. formatting cell contents
+2. displaying a preview in Word
+3. autofitting the contents
+4. changing header titles
+
+These can all be done by the more basic `kable()` function.
+
+```{r data_presentation_flextable_1}
+
+trial_data.flextable = flextable( trial_data.clean ) %>%
+  ### Formatting datatypes consistently
+  set_formatter_type( fmt_date    = "%d-%m-%Y",
+                      fmt_double  = "%.02f",
+                      fmt_integer = "%.0f",
+                      na_str      = "-" ) %>%
+  ### Autofit contents
+  autofit() %>%
+
+  ### Formatting column headings
+  set_header_labels(values=c(
+    "patient"            = "Patient",
+    "date_of_treatment"  = "Treatment date",
+    "drug_treatment"     = "Treatment",
+    "primary_endpoint_1" = "(1)",
+    "primary_endpoint_2" = "(2)"
+  ))
+
+print( trial_data.flextable, preview="docx" )
+
+```
+
+Here are a few thing that we can do with flextable (that you can't do
+with `kable()`...or at least I couldn't work out how to do them
+with `kable()`).
+
+5. Merging cells in the header
+6. Fine control over borders
+
+```{r data_presentation_flextable_2}
+
+trial_data.flextable =  trial_data.flextable %>%
+  
+  ### Merging cells
+  add_header_row( values   =c("","","","Primary endpoints"),
+                  colwidths=c( 1, 1, 1,                  2) ) %>%
+  
+  ### Formatting cells (borders, background)
+  bg( part="header", bg="grey" ) %>%
+  bold( bold = TRUE, part = "header" ) %>%
+  align(align = "center", part="header", i=1) %>%
+  border_remove() %>%
+  hline_top(part="header",border=tbl_border.heavy) %>%
+  hline_top( part="body", border=tbl_border.heavy) %>%
+  hline_bottom( part="body", border=tbl_border.heavy) %>%
+  border(i=1,j=4:5,part="header", border.bottom = tbl_border.standard)
+
+print( trial_data.flextable, preview="docx" )
+
+```
+
+Something that I find really useful is the conditional formatting.
+This lets you emphasize particular rows/columns/cells to which you
+want to draw the reader's attention.
+
+```{r data_presentation_conditional_formatting}
+
+highlight_colour.yellow = "#F9E79F"
+highlight_colour.red    = "#F5B7B1"
+
+trial_data.flextable %>%
+  #bg( i=~primary_endpoint_1<0, bg=highlight_colour.yellow ) %>%
+  #bg( i=~primary_endpoint_2>5, bg=highlight_colour.red    ) #%>%
+  #bg( i = ~ primary_endpoint_1 < 0 & primary_endpoint_2 > 5,
+ #     bg=highlight_colour.yellow ) #%>%
+ bg( i = ~ primary_endpoint_1 < 0 & primary_endpoint_2 > 5,
+    # j = ~ primary_endpoint_1 + primary_endpoint_2,
+     bg=highlight_colour.yellow ) #%>%
+  # color(i = ~ is.na(primary_endpoint_1) & is.na(primary_endpoint_2), 
+        # color="grey")
+
+```
+
+Don't have to use hardcoded values - you can use values that you
+have stored in variables.
+
+Here I am highlighting those cells that are greater than the mean
+for each of the endpoints.
+
+```{r data_presentation_dynamic_formatting}
+
+highlight_colour.blue = "#85C1E9"
+
+primary_endpoint_1.mean = mean( trial_data.clean$primary_endpoint_1, na.rm=TRUE )
+primary_endpoint_2.mean = mean( trial_data.clean$primary_endpoint_2, na.rm=TRUE )
+
+trial_data.flextable %>%
+  
+  bg( i = ~ primary_endpoint_1 > primary_endpoint_1.mean,
+      j = ~ primary_endpoint_1,
+      bg=highlight_colour.blue ) %>%
+  
+  bg( i = ~ primary_endpoint_2 > primary_endpoint_2.mean,
+      j = ~ primary_endpoint_2,
+      bg=highlight_colour.blue ) %>%
+  
+  color(i = ~ is.na(primary_endpoint_1) & is.na(primary_endpoint_2), 
+        color="grey")
+
+```

@@ -1,0 +1,15 @@
+```{r banner}
+include_graphics(path = "img/nhs-nss_logo.png")
+```
+
+# Trial report
+
+Here is some information about the trial report.
+
+|               |                         |
+| ------------- | ----------------------- |
+| Name          | `r REPORT.author`       |
+| Affiliation   | `r REPORT.organisation` |
+| Email address | `r REPORT.author.email` |
+| Phone         | `r REPORT.author.phone` |
+

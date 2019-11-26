@@ -1,0 +1,12 @@
+```{r report_information}
+REPORT.author       = "Lisa Hopcroft"
+REPORT.organisation = "SCTRU / PHI-CKRS"
+REPORT.author.email = "Lisa.Hopcroft1@nhs.net"
+REPORT.author.phone = "0141 282 2119"
+
+theme_TRIAL = theme_bw() +
+  theme( axis.title = element_text( face = "bold" ),
+         axis.text.x = element_text( angle=90,
+                                     vjust=0,
+                                     hjust=0.5) )
+```

@@ -1,0 +1,52 @@
+---
+title: "Bookdown example"
+site: bookdown::bookdown_site
+author: "Lisa Hopcroft"
+date: "8th November 2019"
+output:
+  bookdown::word_document2:
+    toc: yes
+    toc_depth: 2
+    reference_docx: H:\Projects\Reference\DMC_formatting_reference\DMC_formatting_reference_file-01-draft.docx
+---
+
+```{r knitr_options, echo=FALSE}
+knitr::opts_chunk$set( fig.width =6,
+                       fig.height=4,
+                       ft.align="left",
+                       # fig.align ="center",
+                       echo      =FALSE,
+                       message   =FALSE,
+                       warning   =FALSE,
+                       error     =FALSE )
+```
+
+```{r library_imports}
+
+require( tidyverse )
+require( lubridate )
+require( knitr )      # include_graphics()
+require( flextable )
+require( officer )    # fp_border() - formatting flextables
+
+
+# Add variables that will be used repeatedly
+
+```
+
+```{r table_formatting}
+# options(knitr.kable.NA = '-')
+
+tbl_border.standard = fp_border(color="black", width = 1)
+tbl_border.heavy    = fp_border(color="black", width = 2)
+
+tbl_fill.colours = c(
+"grey"   = "#D3D3D3",
+"yellow" = "#F9E79F",
+"red"    = "#F5B7B1"
+)
+
+```
+
+
+

@@ -1,0 +1,36 @@
+```{r dummy_data_clean}
+
+###
+### Cleaning the data
+###
+
+### (1) Change the drug names
+drug_treatment_update = c(
+  "Drug A" = "Drug X",
+  "Drug B" = "Drug Y",
+  "Drug A+B" = "Drug X+Y"
+)
+### (2) "Lose" some data
+missing_mask = sample(1:number_of_patients, 5)
+
+new_primary_endpoint_1 = trial_data$primary_endpoint_1
+new_primary_endpoint_1[ missing_mask ] = NA 
+
+new_primary_endpoint_2 = trial_data$primary_endpoint_2
+new_primary_endpoint_2[ missing_mask ] = NA 
+
+###
+### Update the dataset
+###
+
+trial_data.clean = trial_data %>%
+  mutate( drug_treatment = recode( drug_treatment,
+                                   "Drug A" = "Drug X",
+                                   "Drug B" = "Drug Y",
+                                   "Drug A+B" = "Drug X+Y" ) ) %>%
+  mutate( primary_endpoint_1 = new_primary_endpoint_1,
+          primary_endpoint_2 = new_primary_endpoint_2 )
+
+
+
+```
