@@ -3,8 +3,8 @@
 ### Tuesday 25th February 2020 (10:00 – 12:00) 1.11, Gyle Square
 
 1. **Welcome & Introductions**
-2. 
-3. 
+2. **TBC** - Alice Byers
+3. **TBC** - Jack Hannah
 4. 
 5. 
 6. **R News / Updates**
