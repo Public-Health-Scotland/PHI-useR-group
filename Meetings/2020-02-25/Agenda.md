@@ -4,7 +4,7 @@
 
 1. **Welcome & Introductions**
 2. **TBC** - Alice Byers
-3. **TBC** - Jack Hannah
+3. **phsmethods package** - Jack Hannah
 4. **RStudio Conference** - Terry McLaughlin
 5. **Using openxlsx package** - Jon Minton
 6. **R News / Updates**
