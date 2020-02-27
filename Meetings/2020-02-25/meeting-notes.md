@@ -6,7 +6,7 @@
 
 3. Jon Minton presented how he has used the openxlsx package to format excel workbooks in R. Slides can be viewed here.
 
-4. The following were shared and agreed to be added to the R Resources app:
+4. The following were shared and agreed to be added to the [R Resources app](https://scotland.shinyapps.io/nhs-r-resources/):
    - [rweekly](http://www.rweekly.org) newsletter - Sign up to receive a round up of interesting R work and developments to your inbox every week.
    - [Two Functions Most Days](https://github.com/sharlagelfand/twofunctionsmostdays) - A GitHub repo where two useful functions are shared most days (as the name would suggest!)
 
