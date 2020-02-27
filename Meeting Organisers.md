@@ -6,3 +6,4 @@
 | 4 | 28/08/2019 | Gyle BR 1 | Terry McLaughlin |
 | 5 | 08/11/2019 | Meridian 6.5 | Jade Carruthers |
 | 6 | 25/02/2020 | Gyle 1.11 | Alice Byers |
+| 7 | TBC | Meridian | TBC |
