@@ -1,6 +1,6 @@
 ### Meeting Notes
 
-1. Alice Byers presented on her use of flexdashboard to produce quarterly management reports. Her slides can be viewed on [RPubs](https://rpubs.com/alicebyers5/flexdashboard-slides).
+1. Alice Byers presented on her use of [flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/) to produce quarterly management reports. Her slides can be viewed on [RPubs](https://rpubs.com/alicebyers5/flexdashboard-slides).
 
 2. Jack Hannah presented the recently released [phsmethods](https://github.com/Health-SocialCare-Scotland/phsmethods) package. His slides can be viewed on [RPubs](https://rpubs.com/jackhannah95/phsmethods-useR).
 
