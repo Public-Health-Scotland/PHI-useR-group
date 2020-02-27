@@ -1,8 +1,8 @@
 ### Meeting Notes
 
-1. Alice Byers presented on her use of flexdashboard to produce quarterly management reports. Slides can be viewed on [RPubs](https://rpubs.com/alicebyers5/flexdashboard-slides).
+1. Alice Byers presented on her use of flexdashboard to produce quarterly management reports. Her slides can be viewed on [RPubs](https://rpubs.com/alicebyers5/flexdashboard-slides).
 
-2. Jack Hannah presented the recently released [phsmethods](https://github.com/Health-SocialCare-Scotland/phsmethods) package. Slides can be viewed on [RPubs](https://rpubs.com/jackhannah95/phsmethods-useR).
+2. Jack Hannah presented the recently released [phsmethods](https://github.com/Health-SocialCare-Scotland/phsmethods) package. His slides can be viewed on [RPubs](https://rpubs.com/jackhannah95/phsmethods-useR).
 
 3. Jon Minton presented on how he has used the [openxlsx](https://ycphs.github.io/openxlsx/) package to format excel workbooks in R. The materials for Jon's presentation can be found in the [openxlsx_presentation](https://github.com/Health-SocialCare-Scotland/PHI-useR-group/tree/master/Meetings/2020-02-25/openxlsx_presentation) folder. His slides can be viewed by opening the [`openxlsx_presentation.Rpres`](https://github.com/Health-SocialCare-Scotland/PHI-useR-group/blob/master/Meetings/2020-02-25/openxlsx_presentation/openxlsx_presentation.Rpres) file within RStudio and clicking 'Preview'.
 
