@@ -202,10 +202,10 @@ Example 2: Heatmaps
 ***
 
 - Version with just a couple of slices
-    - [Code here](https://github.com/JonMinton/bayes_factor_slowdown/blob/master/markdown/bayes_factor_ons_e0.Rmd#L248-L252)
+    - [Code here](https://github.com/JonMinton/rising_tide/blob/master/analyses.Rmd#L1221-L1305)
     - Produces [this worksheet](https://github.com/JonMinton/rising_tide/blob/master/tables/blocks_both_main_periods.xlsx)
 - Version with many slices (25 year period, 5 year rolling starts)
-    - [Code here](https://github.com/JonMinton/rising_tide/blob/master/analyses.Rmd#L1180-L1274)
+    - [Code here](https://github.com/JonMinton/rising_tide/blob/master/analyses.Rmd#L1310-L1403)
     - Produces [this behemoth](https://github.com/JonMinton/rising_tide/blob/master/tables/many_blocks.xlsx)!
 
 
